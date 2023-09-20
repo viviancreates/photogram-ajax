@@ -20,9 +20,7 @@
 
       Liked
       
-      <span class="badge rounded-pill text-bg-secondary">
-        <%= user.likes.count %>
-      </span>
+      <%= render "users/profile_nav/likes_count",  user: user %>
     <% end %>
   </li>
 </ul> 

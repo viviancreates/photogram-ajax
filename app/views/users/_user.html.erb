@@ -99,7 +99,7 @@
 
     <div class="row mb-4">
       <div class="col">
-        <%= render "follow_requests/follow_unfollow", recipient: @user %>
+        <%= render "follow_requests/follow_unfollow", sender: current_user, recipient: @user %>
       </div>
     </div>
 
