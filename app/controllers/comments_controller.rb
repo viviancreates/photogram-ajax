@@ -30,13 +30,7 @@ class CommentsController < ApplicationController
     @comment.author = current_user
 
     respond_to do |format|
-      if @comment.save
-        format.html { redirect_back fallback_location: root_path, notice: "Comment was successfully created." }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+      format.js
     end
   end
 
