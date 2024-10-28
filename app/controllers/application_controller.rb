@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   # Hacks to work around Gitpod/SSL issue:
   # We'll override Devise's current_user method.
   # We'll always be signed in as alice.

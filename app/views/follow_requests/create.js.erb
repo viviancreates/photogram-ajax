@@ -1,0 +1,5 @@
+var followContainer = $("#<%= dom_id(@follow_request.recipient) %>_follow");
+
+var newFollowContent = "<%= j(render partial: 'follow_requests/follow_unfollow', locals: { sender: current_user, recipient: @follow_request.recipient }) %>";
+
+followContainer.replaceWith(newFollowContent);
